@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CartServiceService } from 'src/app/carts/services/cart-service.service';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +8,4 @@ import { CartServiceService } from 'src/app/carts/services/cart-service.service'
 export class HeaderComponent {
  
   constructor(){};
-  numOfProducts=JSON.parse(localStorage.getItem("card")!).length
 }
