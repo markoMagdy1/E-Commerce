@@ -1,0 +1,45 @@
+.card{
+    height: 375px;
+    cursor: pointer;
+}
+
+.product-description{
+    height: 80px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+img{
+    height: 200px;
+}
+img:hover{
+    transform: scale(1.1);
+}
+h5{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+button{
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 15px ;
+    color: white;
+}
+/* button:hover{
+    background-color: gray;
+    border: 1px solid gray;
+    transform: scale(1.1);
+} */
+.price-container {
+    background-color: #f5f5f5;
+    
+   
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: 400;
+    color: gray;
+  }
+  

@@ -1,0 +1,15 @@
+.box{
+    height: 500px;
+   
+}
+
+li{
+    font-size: 25px;
+    margin: 20px 0
+}
+
+img{
+
+    max-height: 500px;
+    min-height: 500px;
+}

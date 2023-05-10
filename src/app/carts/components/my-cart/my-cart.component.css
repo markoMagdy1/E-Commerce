@@ -1,0 +1,56 @@
+
+
+  img{
+    height: 80px;
+  }
+  .cart-details{
+    font-size: 20px;
+    font-weight: 500;
+    color: gray;
+
+  }
+  .head-font{
+    color: gray;
+    font-weight: 800;
+    font-size: 40px;
+    
+  }
+  .title-font{
+    color: gray;
+    font-weight: 500;
+    font-size: 30px;
+    white-space: nowrap;
+  }
+  th{
+    color: gray;
+    font-weight: 500;
+    font-size: 25px;
+    /* text-align: center; */
+  }
+  /* td{
+    text-align: center;
+  } */
+
+  .btn-quantity{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  .clear-all{
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .btn-order{
+    background-color: gray;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .quantity-input{
+    color: gray;
+    /* font-weight: 400;
+    font-size: 25px; */
+    border: 1px solid gray;
+    border-radius: 20px;
+  }

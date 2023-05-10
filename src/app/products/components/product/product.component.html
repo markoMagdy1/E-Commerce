@@ -1,0 +1,25 @@
+  <div class="card my-1" >
+    <div class="card-body">
+      <div routerLink="/products/details/{{product.id}}">
+        <img class="card-img-top mb-1" src="{{product.image}}">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text product-description fontf">{{product.description}}</p>
+      </div>
+      <div class="row d-flex justify-content-between ">
+        <button (click)="isAddClicked=true" class="btn btn-info col-6"  *ngIf="!isAddClicked ; else elseNotAdded " >add to cart</button>
+       
+        <span class="col-5 price mt-1" >{{product.price}} EGP</span>
+        <!-- <div class="price-container">
+          <div class="price">{{product.price}} L.E</div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!--  -->
+
+  <ng-template #elseNotAdded>
+    <div class="d-flex col-6">
+      <input type="number" class="col-4 mx-1" [(ngModel)]="amount">
+      <button (click)="add()" class="btn btn-info col-8">add</button>
+    </div>
+  </ng-template>

@@ -1,0 +1,56 @@
+<div class="mt-5 mb-1 head-font">Shoping Cart</div>
+<div *ngIf="cardProducts.length>0 ; else elseEmptyCart">
+  <div class="d-flex justify-content-between">
+    <div class="title-font">you have {{cardProducts.length}} Items in your cart</div>
+    <button (click)="clearCart()" class="btn btn-danger clear-all">Clear </button>
+  </div>
+  <table class="table table-border mt-3 ">
+    <thead>
+      <tr>
+        <th scope="col">Added Items</th>
+        <th scope="col">Price</th>
+        <th scope="col" class="px-5">Quantity</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of cardProducts ; let index = index ">
+        <td class="col-5">
+          <div class="row">
+            <img src="{{product.item.image}}" class="col-3" alt="item.name " />
+            <div class="cart-details col-8 ">
+               {{product.item.title}}
+            </div>
+          </div>
+        </td>
+        <td class="col-2"><div class="cart-details">{{product.item.price}} L.E</div> </td>
+        <td col-2>
+          <div class="cart-details row">
+            <button class="btn btn-info col-1 mx-2 btn-quantity" (click)="increaseQuantity(index)" >+</button>
+            <input type="number"  class="col-4 text-center quantity-input" (change)=" updateCardproducts()" [(ngModel)]="product.quantity" >
+            <button class="btn btn-danger col-1 mx-2 btn-quantity" (click)="decreaseQuantity(index)" >-</button>
+          </div>
+        </td>
+        <td>
+          <div class="cart-details">{{product.item.price*product.quantity }} EGP </div>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProduct(index)">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          
+        </td>
+  
+      </tr>
+    </tbody>
+  </table>
+  <div class="my-5 d-flex justify-content-end">
+    <div class="mx-5 title-font">Total : {{total}} </div>
+    <button class=" btn btn-info btn-order" (click)="orderMyCart()">Order Now</button>
+  </div>
+  
+</div>
+
+<ng-template #elseEmptyCart>
+  <h3 class="m-5 text-center">there 's no items to desplay</h3>
+</ng-template>
