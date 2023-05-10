@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 export class CartServiceService {
 
   baseUrl="https://fakestoreapi.com/";
-  numOFProductsInCart!:number;
 
   constructor(private http:HttpClient) { 
 

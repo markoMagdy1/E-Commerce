@@ -7,7 +7,6 @@ import { SharedModule } from "../shared/shared.module";
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { SliderComponent } from './components/slider/slider.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
         AllProductsComponent,
         ProductDetailsComponent,
         ProductComponent,
-        SliderComponent
     ],
     imports: [
         CommonModule,

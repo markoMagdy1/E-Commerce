@@ -42,7 +42,6 @@ export class MyCartComponent implements OnInit {
   updateCardproducts(){
     localStorage.setItem("card",JSON.stringify(this.cardProducts))
     this.calculateTotal();
-    this.cartService.numOFProductsInCart=this.cardProducts.length
   }
 
   deleteProduct(index:number){
